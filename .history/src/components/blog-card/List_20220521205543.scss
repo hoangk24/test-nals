@@ -1,0 +1,7 @@
+.list-item {
+  padding: 1rem;
+  border-radius: 1rem;
+  &:hover {
+    background-color: red;
+  }
+}

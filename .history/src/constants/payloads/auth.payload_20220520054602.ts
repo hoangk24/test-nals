@@ -1,0 +1,3 @@
+interface IRegisterPayload {
+  name: string
+}

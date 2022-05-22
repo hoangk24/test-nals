@@ -1,0 +1,19 @@
+.blog-card {
+  width: 100%;
+  height: 100%;
+  &:hover: {
+  }
+  .card-img-top {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+    img {
+      display: block;
+      transform: scale(1.3);
+      width: 100%;
+      position: absolute;
+      object-fit: cover;
+    }
+  }
+}

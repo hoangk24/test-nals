@@ -1,0 +1,23 @@
+.blog-card {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    transform: scale(1.01);
+  }
+  .card-img-top {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+    img {
+      display: block;
+      transform: scale(1.3);
+      width: 100%;
+      position: absolute;
+      object-fit: cover;
+    }
+  }
+}

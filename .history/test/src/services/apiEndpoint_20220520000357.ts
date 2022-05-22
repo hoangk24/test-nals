@@ -1,0 +1,1 @@
+const API_ENPOINT = `${VITE_API_URL}/api/${VITE_API_VERSION}`;

@@ -1,0 +1,3 @@
+interface CreateBlog {
+  title: string
+}

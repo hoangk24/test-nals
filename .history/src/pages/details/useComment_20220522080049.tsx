@@ -1,0 +1,15 @@
+import { useAppDispatch } from 'app/store'
+import { Blog } from 'constants/models/blog.model'
+import { Comment } from 'constants/models/comment.model'
+import useLoading from 'hooks/useLoading'
+import React, { useState } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
+
+export default function useComment() {
+  const { id } = useParams()
+  const [comments, setComments] = useState<Comment[]>([])
+  const dispatch = useAppDispatch()
+  const navigate = useNavigate()
+  const loading = useLoading()
+  return {}
+}

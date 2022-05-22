@@ -1,0 +1,8 @@
+import { AxiosResponse } from 'axios'
+import { IRegisterPayload } from 'constants/payloads/auth.payload'
+import { API_ENPOINT } from 'services/apiEndpoint'
+import axiosClient from 'services/axiosClient'
+
+type Register = (body: IRegisterPayload) => Promise<AxiosResponse<any>>
+
+export const register = (body) => axiosClient.post(API_ENPOINT.AUTHORIZATION.REGISTER, body)

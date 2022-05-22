@@ -1,0 +1,36 @@
+import Input from 'components/input/Input'
+import useSigleFileUpload from 'hooks/useSigleFileUpload'
+import React from 'react'
+import { Button, Modal } from 'react-bootstrap'
+import { useForm } from 'react-hook-form'
+interface Props {
+  visible: boolean
+  hide: () => void
+}
+export default function CreateBlog({ hide, visible }: Props) {
+  const { control, handleSubmit } = useForm()
+  const { file, handleChange } = useSigleFileUpload()
+
+  const onSubmit = (data: any) => console.log(data)
+
+  return (
+    <Modal show={visible} onHide={hide} backdrop='static' keyboard={false}>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Create new blog</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Input control={control} name='title' label='Tiêu đề' />
+          <Input control={control} name='content' label='Nội dung' />
+          <input type='file' onChange={handleChange} />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant='secondary' onClick={hide}>
+            Close
+          </Button>
+          <Button variant='primary'>Create</Button>
+        </Modal.Footer>
+      </form>
+    </Modal>
+  )
+}
